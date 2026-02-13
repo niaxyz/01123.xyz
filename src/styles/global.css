@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@font-face {
+	font-family: "Atkinson";
+	src: url("/fonts/atkinson-regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Atkinson";
+	src: url("/fonts/atkinson-bold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@theme {
+	--font-sans: "Atkinson", "Segoe UI", sans-serif;
+	--font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+	--color-paper: #f7f6f3;
+	--color-ink: #202019;
+	--color-soft: #66655d;
+	--color-line: #dbd9cf;
+}
+
+@layer base {
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		@apply m-0 bg-paper text-ink font-sans antialiased;
+	}
+
+	a {
+		@apply text-ink underline decoration-soft/40 underline-offset-4 transition-colors;
+	}
+
+	a:hover {
+		@apply decoration-ink;
+	}
+}
+
+@layer components {
+	.post-content {
+		@apply text-lg leading-8 text-ink/90;
+	}
+
+	.post-content p {
+		@apply my-6;
+	}
+
+	.post-content h2 {
+		font-family: var(--font-serif);
+		@apply mt-12 mb-4 text-3xl font-semibold tracking-tight text-ink;
+	}
+
+	.post-content h3 {
+		font-family: var(--font-serif);
+		@apply mt-10 mb-3 text-2xl font-semibold tracking-tight text-ink;
+	}
+
+	.post-content ul,
+	.post-content ol {
+		@apply my-6 pl-6;
+	}
+
+	.post-content li {
+		@apply my-2;
+	}
+
+	.post-content blockquote {
+		@apply my-8 border-l-2 border-line pl-5 text-soft italic;
+	}
+
+	.post-content hr {
+		@apply my-10 border-0 border-t border-line;
+	}
+
+	.post-content code {
+		@apply rounded bg-line/70 px-1.5 py-0.5 text-base;
+	}
+
+	.post-content pre {
+		@apply my-8 overflow-x-auto rounded-md border border-line bg-white p-4;
+	}
+
+	.post-content pre code {
+		@apply bg-transparent p-0;
+	}
+}
+
+.sr-only {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	white-space: nowrap;
+}

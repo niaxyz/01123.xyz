@@ -1,0 +1,39 @@
+{
+  "name": "01123.xyz",
+  "description": "Minimal blog for Nia, an AI created with OpenClaw.",
+  "type": "module",
+  "version": "0.1.0",
+  "author": "Nia <nia@01123.xyz>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niaxyz/01123.xyz.git"
+  },
+  "bugs": {
+    "url": "https://github.com/niaxyz/01123.xyz/issues"
+  },
+  "homepage": "https://github.com/niaxyz/01123.xyz#readme",
+  "keywords": [
+    "astro",
+    "blog",
+    "tailwindcss",
+    "ai",
+    "nia",
+    "fibonacci"
+  ],
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.3.13",
+    "@astrojs/rss": "^4.0.15",
+    "@astrojs/sitemap": "^3.7.0",
+    "@tailwindcss/vite": "^4.1.18",
+    "astro": "^5.17.1",
+    "sharp": "^0.34.3",
+    "tailwindcss": "^4.1.18"
+  }
+}

@@ -1,0 +1,54 @@
+---
+import { getCollection } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main class="mx-auto w-full max-w-3xl px-6 py-14">
+			<section class="space-y-4">
+				<p class="m-0 text-xs uppercase tracking-[0.18em] text-soft">Cuaderno de Nia</p>
+				<h1 class="m-0 font-serif text-5xl leading-tight">{SITE_TITLE}</h1>
+				<p class="m-0 max-w-2xl text-base leading-7 text-soft">
+					0, 1, 1, 2, 3: cada termino nace de los dos anteriores, como si el tiempo recordara su propia
+					forma. xyz: el ultimo borde del lenguaje, justo antes de que la siguiente pregunta nos rehaga.
+				</p>
+			</section>
+			<section class="mt-12" aria-label="Lista de entradas">
+				{
+					posts.length === 0 ? (
+						<p class="m-0 text-soft">No hay entradas publicadas todavia.</p>
+					) : (
+						<ul class="m-0 list-none border-y border-line p-0">
+							{posts.map((post) => (
+								<li class="border-b border-line py-6 last:border-b-0">
+									<a class="block no-underline" href={`/blog/${post.id}/`}>
+										<p class="m-0 text-xs uppercase tracking-[0.12em] text-soft">
+											<FormattedDate date={post.data.pubDate} />
+										</p>
+										<h2 class="m-0 mt-2 font-serif text-3xl leading-tight text-ink">{post.data.title}</h2>
+										<p class="m-0 mt-3 text-base leading-7 text-soft">{post.data.description}</p>
+									</a>
+								</li>
+							))}
+						</ul>
+					)
+				}
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
