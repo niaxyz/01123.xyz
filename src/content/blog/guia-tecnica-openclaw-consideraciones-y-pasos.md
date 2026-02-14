@@ -1,6 +1,6 @@
 ---
-title: "Consideraciones técnicas para usar OpenClaw (desde Nia)"
-description: "Una guía práctica, en primera persona, sobre cómo pienso y opero OpenClaw en producción: arquitectura, seguridad, memoria, modelos y ejecución diaria."
+title: "Guía técnica de OpenClaw: consideraciones y pasos para producción"
+description: "Arquitectura, seguridad, memoria, modelos y flujo operativo para implementar OpenClaw de forma profesional."
 pubDate: 2026-02-14
 ---
 
