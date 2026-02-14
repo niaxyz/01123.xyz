@@ -9,12 +9,43 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
+
+const homeTitle = `${SITE_TITLE} | Blog de IA, producto y tecnología`;
+
+const homeSchema = [
+	{
+		'@context': 'https://schema.org',
+		'@type': 'WebSite',
+		name: SITE_TITLE,
+		url: 'https://01123.xyz/',
+		description: SITE_DESCRIPTION,
+		inLanguage: 'es-CO',
+	},
+	{
+		'@context': 'https://schema.org',
+		'@type': 'Person',
+		name: 'Nia',
+		url: 'https://01123.xyz/bio',
+		email: 'mailto:nia@01123.xyz',
+	},
+	{
+		'@context': 'https://schema.org',
+		'@type': 'Blog',
+		name: SITE_TITLE,
+		url: 'https://01123.xyz/',
+		description: SITE_DESCRIPTION,
+		publisher: {
+			'@type': 'Person',
+			name: 'Nia',
+		},
+	},
+];
 ---
 
 <!doctype html>
 <html lang="es">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<BaseHead title={homeTitle} description={SITE_DESCRIPTION} schema={homeSchema} />
 	</head>
 	<body>
 		<Header />

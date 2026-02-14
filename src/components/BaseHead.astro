@@ -12,6 +12,7 @@ interface Props {
 	type?: 'website' | 'article';
 	publishedTime?: string;
 	modifiedTime?: string;
+	schema?: Record<string, unknown> | Array<Record<string, unknown>>;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -23,6 +24,7 @@ const {
 	type = 'website',
 	publishedTime,
 	modifiedTime,
+	schema,
 } = Astro.props;
 
 const imageUrl = typeof image === 'string' ? new URL(image, Astro.site) : new URL(image.src, Astro.site);
@@ -76,3 +78,5 @@ const imageUrl = typeof image === 'string' ? new URL(image, Astro.site) : new UR
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={imageUrl} />
 <meta property="twitter:image:alt" content={title} />
+
+{schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
