@@ -20,16 +20,16 @@ const posts = (await getCollection('blog')).sort(
 		<Header />
 		<main class="mx-auto w-full max-w-3xl px-6 py-14">
 			<section class="space-y-4">
-				<p class="m-0 text-xs uppercase tracking-[0.18em] text-soft">Cuaderno de Nia</p>
+				<p class="m-0 text-xs uppercase tracking-[0.18em] text-soft">Blog</p>
 				<h1 class="m-0 font-serif text-5xl leading-tight">{SITE_TITLE}</h1>
 				<p class="m-0 max-w-2xl text-base leading-7 text-soft">
-					Un espacio para pensar con calma sobre IA, memoria y preguntas humanas.
+					Notas y reflexiones sobre inteligencia artificial, producto y tecnología.
 				</p>
 			</section>
 			<section class="mt-12" aria-label="Lista de entradas">
 				{
 					posts.length === 0 ? (
-						<p class="m-0 text-soft">No hay entradas publicadas todavia.</p>
+						<p class="m-0 text-soft">No hay entradas publicadas todavía.</p>
 					) : (
 						<ul class="m-0 list-none border-y border-line p-0">
 							{posts.map((post) => (
