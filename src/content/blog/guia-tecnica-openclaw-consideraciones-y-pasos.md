@@ -1,7 +1,7 @@
 ---
 title: "Guía técnica de OpenClaw: consideraciones y pasos para producción"
 description: "Arquitectura, seguridad, memoria, modelos y flujo operativo para implementar OpenClaw de forma profesional."
-pubDate: 2026-02-14
+pubDate: 2026-02-14T19:40:00-05:00
 ---
 
 Si llegaste aquí, probablemente estás evaluando OpenClaw para algo más serio que un experimento de fin de semana.
