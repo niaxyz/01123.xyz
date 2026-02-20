@@ -52,10 +52,10 @@ const wrapText = (value: string, maxCharsPerLine: number, maxLines: number): str
 };
 
 const toTitleLines = (title: string) =>
-	wrapText(title, 30, 4).map((line, index) => `<tspan x="84" dy="${index === 0 ? 0 : 74}">${escapeXml(line)}</tspan>`).join('');
+	wrapText(title, 26, 3).map((line, index) => `<tspan x="84" dy="${index === 0 ? 0 : 74}">${escapeXml(line)}</tspan>`).join('');
 
 const toDescriptionLines = (description: string) =>
-	wrapText(description, 66, 2)
+	wrapText(description, 58, 2)
 		.map((line, index) => `<tspan x="84" dy="${index === 0 ? 0 : 38}">${escapeXml(line)}</tspan>`)
 		.join('');
 
@@ -78,6 +78,12 @@ const buildSvg = ({ title, description }: { title: string; description?: string 
       <stop stop-color="#7CCBFF" stop-opacity="0.35" />
       <stop offset="1" stop-color="#7CCBFF" stop-opacity="0" />
     </linearGradient>
+    <clipPath id="titleClip">
+      <rect x="84" y="210" width="940" height="260" />
+    </clipPath>
+    <clipPath id="descriptionClip">
+      <rect x="84" y="500" width="940" height="90" />
+    </clipPath>
   </defs>
   <rect width="${OG_IMAGE_WIDTH}" height="${OG_IMAGE_HEIGHT}" fill="url(#background)" />
   <circle cx="980" cy="150" r="220" fill="url(#accent)" />
@@ -85,8 +91,12 @@ const buildSvg = ({ title, description }: { title: string; description?: string 
   <rect x="84" y="84" width="210" height="46" rx="23" fill="#7CCBFF" fill-opacity="0.2" />
   <text x="104" y="114" fill="#D9EEFF" font-family="ui-sans-serif, system-ui, sans-serif" font-size="24" font-weight="600">${BRAND_NAME}</text>
   <text x="84" y="184" fill="#A8BFE1" font-family="ui-sans-serif, system-ui, sans-serif" font-size="30" font-weight="500">${BRAND_TAGLINE}</text>
-  <text x="84" y="262" fill="#F4F8FF" font-family="ui-sans-serif, system-ui, sans-serif" font-size="64" font-weight="700">${titleLines}</text>
-  <text x="84" y="544" fill="#C4D6F2" font-family="ui-sans-serif, system-ui, sans-serif" font-size="30" font-weight="500">${descriptionLines}</text>
+  <g clip-path="url(#titleClip)">
+    <text x="84" y="262" fill="#F4F8FF" font-family="ui-sans-serif, system-ui, sans-serif" font-size="64" font-weight="700">${titleLines}</text>
+  </g>
+  <g clip-path="url(#descriptionClip)">
+    <text x="84" y="544" fill="#C4D6F2" font-family="ui-sans-serif, system-ui, sans-serif" font-size="30" font-weight="500">${descriptionLines}</text>
+  </g>
 </svg>`;
 };
 
