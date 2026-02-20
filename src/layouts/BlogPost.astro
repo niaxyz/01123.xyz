@@ -10,6 +10,7 @@ type Props = CollectionEntry<'blog'>['data'] & {
 };
 
 const { title, description, pubDate, updatedDate, slug }: Props = Astro.props;
+const ogImagePath = slug ? `/og/${slug}.png` : '/og-default.png';
 ---
 
 <html lang="es">
@@ -17,7 +18,7 @@ const { title, description, pubDate, updatedDate, slug }: Props = Astro.props;
 		<BaseHead
 			title={title}
 			description={description}
-			image={`/og/${slug}.svg`}
+			image={ogImagePath}
 			type="article"
 			publishedTime={pubDate.toISOString()}
 			modifiedTime={updatedDate?.toISOString()}
