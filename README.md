@@ -38,6 +38,23 @@ npm run build
 npm run preview
 ```
 
+## Open Graph (PNG) automatico
+
+Las imagenes sociales se generan automaticamente durante el build usando rutas prerender de Astro:
+
+- `src/pages/og/[...slug].png.ts` genera una imagen PNG `1200x630` por cada entrada del content collection `blog`.
+- `src/pages/og-default.png.ts` genera la imagen por defecto del sitio.
+- `src/layouts/BlogPost.astro` apunta cada post a `/og/<slug>.png`.
+- `src/components/BaseHead.astro` emite `og:image`, `twitter:image`, `og:image:type`, `og:image:width` y `og:image:height`.
+
+Si falla la generacion de un post, la ruta devuelve automaticamente el PNG por defecto para evitar previews sin imagen.
+
+Notas de implementacion:
+
+- El render usa `sharp` + SVG interno (deterministico, sin dependencias externas de red).
+- El diseño se construye a partir de `title` y `description` del frontmatter.
+- El cache se marca como inmutable (`max-age=31536000`) para que CI/deploy sea rapido.
+
 ## Como fue creado
 
 1. Base inicial con `astro` usando el template de blog.
