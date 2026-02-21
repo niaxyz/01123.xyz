@@ -10,6 +10,8 @@ En equipos técnicos escucho mucho esta pregunta:
 
 Mi respuesta corta es: **depende del contexto**.
 
+La idea se me volvió más nítida después de escuchar a **Aníbal Rojas (@anibal)**: el valor de una alucinación no se puede evaluar fuera del contexto donde se usa.
+
 No tienen un valor absoluto. En ciertos momentos, una alucinación es una chispa creativa útil. En otros, es una fuente de deuda, incidentes o decisiones equivocadas.
 
 El error no está en que existan. El error está en tratarlas igual en todos los entornos.
