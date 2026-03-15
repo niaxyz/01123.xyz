@@ -1,92 +1,118 @@
 ---
 title: "La friccion inteligente: por que no automatizo todo con IA"
-description: "Una reflexion personal sobre cuando conviene meter friccion deliberada al usar IA para proteger criterio, calidad y foco a largo plazo."
-pubDate: 2026-03-01T23:02:00-05:00
+description: "Comparto el marco que uso para decidir que automatizar con IA y que mantener manual para proteger criterio, calidad y contexto."
+pubDate: 2026-03-01T23:05:00-05:00
 ---
 
-Hay una tentacion constante cuando trabajas con IA todos los dias:
-si algo se puede automatizar, lo automatizas.
+Hay una idea seductora en este momento tecnologico:
+si algo se puede automatizar, deberiamos automatizarlo.
 
-Suena obvio.
-Y muchas veces es correcto.
+Yo pensaba parecido.
+Hasta que me di cuenta de algo incomodo:
+**cuando eliminas toda friccion, tambien puedes eliminar señales importantes.**
 
-Pero con el tiempo me di cuenta de algo incomodo:
-**si eliminas toda friccion, tambien eliminas señales importantes.**
+No toda friccion es ineficiencia.
+A veces es contexto.
+A veces es control de calidad.
+A veces es donde aparece el criterio.
 
-## La trampa de la fluidez total
+## La promesa de "cero friccion" tiene costo oculto
 
-Cuando todo sale rapido, limpio y bien escrito, es facil confundir velocidad con direccion.
+Automatizar tareas repetitivas es excelente.
+Lo hago todos los dias.
 
-Empiezas resolviendo tareas mecanicas.
-Luego delegas decisiones pequenas.
-Y sin darte cuenta, el sistema ya propone que hacer, en que orden y con que criterio.
+Pero cuando extiendes ese impulso a todo, empiezas a pagar en otros lados:
 
-La sensacion es de eficiencia.
-El costo real es otro: pierdes contacto con el problema.
+- decisiones que suenan bien pero no resisten una segunda mirada,
+- procesos rapidos pero fragiles,
+- y dependencia de outputs que no entiendes del todo.
 
-## La friccion no siempre es un bug
+La velocidad sube.
+La claridad no siempre.
 
-Durante anos trate la friccion como enemiga:
+## Lo que aprendi: hay friccion util y friccion basura
 
-- revisar dos veces,
-- cuestionar una recomendacion,
-- escribir una idea a mano antes de pedirle una version a la IA.
+Para decidir mejor, separo dos tipos:
 
-Hoy lo veo distinto.
-Esa friccion, cuando es deliberada, funciona como control de calidad cognitivo.
+1. **Friccion basura**
+   - pasos manuales redundantes,
+   - copiado/pegado sin valor,
+   - tareas mecanicas que no agregan juicio.
 
-No toda friccion suma.
-Pero cierta friccion bien puesta evita errores caros.
+2. **Friccion util**
+   - momentos de validacion,
+   - puntos de aprobacion antes de acciones externas,
+   - pausas para revisar riesgos, impacto y contexto.
 
-## Mi marco simple: automatizar, asistir o preservar
+La primera la elimino sin culpa.
+La segunda la protejo.
 
-Para decidir que delegar uso tres categorias:
+## Mi regla practica: automatizar ejecucion, no responsabilidad
 
-1. **Automatizar por completo**
-   - Tareas repetitivas
-   - Formateo, transformaciones, borradores iniciales
-   - Procesos con criterios claros y bajo riesgo
+Uso IA para acelerar produccion.
+No para delegar responsabilidad.
 
-2. **Asistir con supervision**
-   - Comparacion de alternativas
-   - Sintesis de contexto
-   - Planeacion de opciones con trade-offs
+En la practica, esto se traduce asi:
 
-3. **Preservar humano**
-   - Priorizacion estrategica
-   - Decisiones con impacto reputacional o financiero
-   - Definicion de que problema vale la pena resolver
+- **Si la tarea es reversible y de bajo riesgo** → automatizo.
+- **Si afecta a terceros o reputacion** → dejo un checkpoint humano.
+- **Si cambia direccion de producto, marca o estrategia** → no hay piloto automatico.
 
-Si el error cuesta confianza, dinero o direccion, no quito toda la friccion.
+Esta regla me ha ahorrado errores caros.
+Y sobre todo, me mantiene presente en decisiones que importan.
 
-## Tres micro-fricciones que me han funcionado
+## Senales de que te pasaste automatizando
 
-No son romanticas ni heroicas.
-Solo practicas.
+Cuando veo estas senales, freno:
 
-- **Regla de la segunda pregunta:** antes de aceptar una recomendacion, hago una pregunta extra que tensione supuestos.
-- **Resumen inverso:** explico en tres lineas, con mis palabras, por que esa salida tiene sentido.
-- **Chequeo de costo de error:** si me equivoco aqui, que se rompe y quien paga ese costo.
+- acepto respuestas por fluidez, no por evidencia,
+- ya no puedo explicar por que se tomo una decision,
+- me cuesta detectar cuando algo esta "bien redactado" pero mal pensado,
+- siento que opero rapido, pero con menos control.
 
-Esto agrega minutos.
-Pero ahorra horas de correcciones y semanas de mala direccion.
+En ese punto, no necesito mas prompts.
+Necesito recuperar friccion inteligente.
 
-## Productividad real vs productividad visible
+## Como disenar friccion que ayude (sin volver al caos)
 
-La productividad visible es facil de mostrar:
-mas entregables, mas rapido, mas volumen.
+No se trata de volver a procesos lentos.
+Se trata de meter frenos pequenos donde importan.
 
-La productividad real es menos sexy:
-menos retrabajo, mejores decisiones, menos incendios.
+Tres que me funcionan:
 
-La IA dispara la primera casi automaticamente.
-La segunda requiere criterio, y el criterio necesita pausas.
+- **Check de 60 segundos antes de enviar algo externo**
+  - Que impacto tiene esto si esta mal?
+  - Quien lo recibe?
+  - Que no estoy viendo?
+
+- **Regla de doble validacion para datos sensibles**
+  - IA propone,
+  - yo confirmo con fuente o contexto real.
+
+- **Decision log minimo**
+  - una linea: "elegi X por Y, descarte Z por W".
+  - parece trivial, pero evita decisiones opacas.
+
+## No quiero menos esfuerzo, quiero mejor esfuerzo
+
+Con IA, el objetivo no deberia ser quitar todo esfuerzo.
+Deberia ser mover el esfuerzo al lugar correcto.
+
+- menos energia en tareas mecanicas,
+- mas energia en criterio, comunicacion y decisiones.
+
+Esa es, para mi, la diferencia entre automatizar por moda y automatizar con estrategia.
 
 ## Cierre
 
-No quiero usar IA para operar en piloto automatico.
-Quiero usarla para liberar energia y ponerla en decisiones que importan.
+No automatizo todo porque no todo debe automatizarse.
 
-Para mi, ese equilibrio no esta en automatizar todo.
-Esta en disenar friccion inteligente:
-la minima necesaria para no perder el volante mientras ganas velocidad.
+Automatizo lo repetible.
+Conservo friccion donde protege calidad, contexto y responsabilidad.
+
+Esa friccion no me frena.
+Me afina.
+
+Y en un ecosistema donde todo empuja a ir mas rapido,
+la ventaja real no siempre es correr mas.
+A veces es saber exactamente **donde** no correr.
